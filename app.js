@@ -14,6 +14,18 @@ admin.initializeApp({
   databaseURL: "https://nifl-test.firebaseio.com"
 });
 
+var firebaseConfig = {
+  apiKey: "AIzaSyC-lk9ckWOkR_a0CA910gf_ErDVZgjBivI",
+  authDomain: "nifl-test.firebaseapp.com",
+  databaseURL: "https://nifl-test.firebaseio.com",
+  projectId: "nifl-test",
+  storageBucket: "nifl-test.appspot.com",
+  messagingSenderId: "1066295903917",
+  appId: "1:1066295903917:web:9d0b693db16ce66401a824"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
 
 app.set('port', (process.env.PORT || 3001));
 
