@@ -4,27 +4,14 @@ var admin = require("firebase-admin");
 
 const app = express();
 
-// TODO: Enter the path to your service account json file
 // Need help with this step go here: https://firebase.google.com/docs/admin/setup
 const serviceAccount = require("/Users/samy/git/Madden-Companion-Exporter/nifl-test-firebase-adminsdk-key.json");
 
-// TODO: Enter your database url from firebase
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
   databaseURL: "https://nifl-test.firebaseio.com"
 });
 
-var firebaseConfig = {
-  apiKey: "AIzaSyC-lk9ckWOkR_a0CA910gf_ErDVZgjBivI",
-  authDomain: "nifl-test.firebaseapp.com",
-  databaseURL: "https://nifl-test.firebaseio.com",
-  projectId: "nifl-test",
-  storageBucket: "nifl-test.appspot.com",
-  messagingSenderId: "1066295903917",
-  appId: "1:1066295903917:web:9d0b693db16ce66401a824"
-};
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
 
 
 app.set('port', (process.env.PORT || 3001));
