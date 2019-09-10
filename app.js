@@ -5,7 +5,7 @@ var admin = require("firebase-admin");
 const app = express();
 
 // Need help with this step go here: https://firebase.google.com/docs/admin/setup
-const serviceAccount = require("/Users/samy/git/Madden-Companion-Exporter/nifl-test-firebase-adminsdk-key.json");
+const serviceAccount = require("./nifl-test-firebase-adminsdk-key.json");
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
